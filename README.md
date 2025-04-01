@@ -1,16 +1,18 @@
-# Company Salary Management
+![Diagram for Bridge Project Pattern](./BridgeDiagram.png)
 
-Este projeto calcula os salários dos funcionários de uma empresa com base em sua qualificação acadêmica. O sistema assegura que cada nível de graduação (High School, College, PostGraduate) seja tratado de forma única, garantindo consistência nos cálculos salariais.
+# Padrão Bridge aplicado a um sistema de cargos e salários
 
-## 📌 Funcionalidades
+## 📌 Descrição
+Este projeto implementa o padrão **Bridge** para separar as responsabilidades de **Cargos** e **Escolaridade**.
 
-- Definir salários com base no nível educacional do funcionário.
-- Aplicar aumentos proporcionais à qualificação.
-- Utilizar testes automatizados para validar os cálculos e a integridade dos dados do funcionário.
-- Evitar saídas diretas no console, utilizando testes unitários.
+O **padrão Bridge** permite desacoplar a abstração (Cargos) da implementação (Escolaridade), possibilitando a extensão independente de ambas.
 
-## 🛠️ Tecnologias Utilizadas
+## 🎯 Como o Bridge foi aplicado?
+- Foi criada a interface EducationLevel, que define o método percentualAumento().
+- Foi implementada a interface EducationLevel em diferentes classes (EnsinoMedio, Graduacao, Mestrado, Doutorado).
+- A classe Cargo recebe um EducationLevel, permitindo que cargos como Desenvolvedor, Designer e Gerente tenham comportamentos diferentes de acordo com o nível educacional do funcionário.
 
-- **Java** – Linguagem principal do projeto.
-- **JUnit** – Para criação de testes automatizados.
-- **Maven** (opcional) – Gerenciamento de dependências.
+## Aluno
+- Nome: João Vitor Amorim Lopes
+- Matrícula: 0900043180
+- Curso: Sistemas de Informação
